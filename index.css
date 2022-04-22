@@ -1,4 +1,3 @@
-
 :root {
   --color-black: black;
   --color-white: white;
@@ -55,7 +54,8 @@ label {
 }
 
 input,
-select, .inputtextarea {
+select,
+.inputtextarea {
   text-align: center;
 }
 
