@@ -1,0 +1,134 @@
+
+
+
+:root {
+  --color-black: black;
+  --color-white: white;
+  --color-boton: #000091;
+}
+
+body{
+  width: 100vw;
+  color: var(--color-white);
+}
+
+.navbar{
+  position:fixed;
+  display: flex;
+  justify-content:center;
+  top: 0;
+  left: 0;
+  right:0;
+  background:var( --color-black);
+  width:100%;
+}
+
+.listanav{
+  display:flex;
+  margin-right:20px;
+}
+
+.listanav a:hover{
+  background: var(--color-boton);
+  border-radius:0.2em;
+}
+
+.listanav a{
+  font-size:20px;
+  font-weight:bold;
+  padding: 10px;
+  margin-right:20px;
+}
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content:center;
+  font-size:25px;
+  font-family: cursive;
+  background-image: linear-gradient( 135deg, #F05F57 10%, #360940 100%);
+}
+
+@media (max-width: 400px) {
+  .welcome-section {
+    background-image: linear-gradient( 135deg, #43CBFF 10%, #9708CC 100%);
+  }
+  .projects{
+    background-image: linear-gradient( 135deg, #F05F57 10%, #360940 100%);
+  }
+}
+
+#proyecto-img{
+  width:350px;
+  height:250px;
+  margin:auto;
+}
+
+#projects{
+ background-image: linear-gradient( 135deg, #43CBFF 10%, #9708CC 100%);
+ margin-top:20px;
+ text-align:center;
+}
+
+#projects h2,p,img{
+  background:var(--color-black);
+  padding:5px;
+  width:60%;
+  margin:auto;
+  margin-top:10px;
+}
+
+#projectos-ind p{
+  font-family:arial;
+  margin:15px auto;
+}
+
+#projectos-ind a{
+  display:inline-block;
+  margin:auto;
+}
+
+a{
+   text-decoration:none;
+  color: var(--color-white);
+}
+
+li{
+  list-style:none;
+}
+
+#contacto {
+  font-family: cursive;
+  font-weight:bold;
+  text-align:center;
+  padding-bottom:10px;
+  background:var(--color-black);
+}
+
+#contacto h3{
+  padding-top:15px;
+  font-size:35px;
+}
+
+#contacto div{
+  border-radius:20px;
+  padding-top:5px;
+  padding-bottom:10px;
+  width:20%;
+  margin:auto;
+  background-image: linear-gradient( 135deg, #F05F57 10%, #360940 100%);
+}
+
+#redes-sociales{
+  float: center;
+  text-align:center;
+  font-size:15px;
+}
+
+
+
+
+
+
