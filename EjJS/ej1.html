@@ -1,4 +1,7 @@
 
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,26 +21,17 @@ const arrNames=[
     {id:5,name: 'Lala'},
 ]
 
-//Tenemos dos formas de realizar la busqueda de los valores cuando el 
-    //id me vale 3
 
 
-//Metodo forEach
-arrNames.forEach(element => {
-    if(element.id == 3){
-        console.log(element);
-    }
-});
+var met = arrNames.find(element => element.id == 3);
+console.log(met);
 
-//Metodo find
-arrNames.find(element => {
-    if(element.id == 3){
-        console.log(element);
-    }
-})
 
 </script>
  
 </main>
 </body>
 </html>
+
+
+

@@ -24,14 +24,15 @@
 
   
   arrCities.filter(element => {
-       if (element.capital != false && element.country === 'Spain'){
+       if (element.capital && element.country === 'Spain'){
            const indi = arrCities.indexOf(element);
            arrCities.splice(indi,1);
        }
    });
 
+   
    arrCities.forEach(element => {
-       document.write("Ciudad: " + element.city + " Pais: " + element.country + "<br>");
+       document.write(` Ciudad: ${element.city}  Pais: ${element.country}  <br>`);
    });
 
 
