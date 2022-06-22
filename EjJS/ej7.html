@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <script>
+
+        let returnFalsyValues = (obj,ty) =>{
+            var result = Object.values(obj).filter(element => {
+              if (typeof(element) != ty){  console.log(element);}
+            });
+        }
+
+       returnFalsyValues({a:1, b : '2', c:3},x=>typeof x === 'string');
+        
+
+        </script>
+    </body>
+</html>
+
