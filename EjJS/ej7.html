@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,8 +10,10 @@
         <script>
 
         let returnFalsyValues = (obj,ty) =>{
-            var result = Object.values(obj).filter(element => {
-              if (typeof(element) != ty){  console.log(element);}
+            var result = Object.keys(obj).map(element => {
+                if(!ty(obj[element])){
+                    console.log(element, ' -> ', obj[element]);
+                }
             });
         }
 
@@ -21,4 +24,4 @@
     </body>
 </html>
 
-//Falta la comparación del tipo de variable según se pase por la función, ahora está puesto que sea siempre la comparación con string
+
