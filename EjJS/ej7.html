@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,14 +9,16 @@
         <script>
 
         let returnFalsyValues = (obj,ty) =>{
+            var retu = [];
             var result = Object.keys(obj).map(element => {
                 if(!ty(obj[element])){
-                    console.log(element, ' -> ', obj[element]);
+                   retu.push(element, ' -> ', obj[element]);
                 }
             });
+            return retu;
         }
 
-       returnFalsyValues({a:1, b : '2', c:3},x=>typeof x === 'string');
+       console.log(returnFalsyValues({a:1, b : '2', c:3},x=>typeof x === 'string'));
         
 
         </script>
