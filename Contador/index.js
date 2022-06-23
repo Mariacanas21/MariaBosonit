@@ -8,35 +8,40 @@ var num = 0;
 
 const botsuma = document.querySelector('#up');
 var ini = document.getElementById('inicio').value;
-
+var stp = document.getElementById('step').value;
 
 //Función que me realiza las operaciones del contador
 
 var contad=(bot)=>{
     
 
-    if(bot.value=="start"){
+    if(bot.value==="start"){
         num=ini;
     }
-    else if(bot.value=="pause"){
+    else if(bot.value==="pause"){
         clearInterval(num);
     }
-    else if(bot.value=="reset"){
+    else if(bot.value==="reset"){
         num=0;
     }
-    else {
-        setInterval(operacion(bot.value),100);
+    else if (bot.value==="up"){
+        console.log(num);
+        setInterval(operacionS(bot.value),100);
+        console.log(num);
+    }
+    else{
+        setInterval();
     }
 
     document.getElementById("numerocont").innerHTML = num;
     
 }
 
-const operacion=(op)=>{
+var operacionS=(op)=>{
 
-    var stp = document.getElementById('step').value;
+    
 
-    if(op=="up"){
+    if(op==="up"){
         num = parseInt(stp) + parseInt(num);
     }
     else{
