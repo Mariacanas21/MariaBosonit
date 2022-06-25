@@ -16,24 +16,27 @@
     <div class="setup">
         <p>SetUp</p>
 
-        <button class="str" value="start"  onclick="contad(this)"> Start  </button>
-        <button class="pau" value="pause"  onclick="contad(this)"> Pause </button>
-        <button class="rst" value="reset"  onclick="contad(this)"> Reset </button>
+        <div id="controlador">
+            <button class="str" value="start"  onclick="start()"> Start  </button>
+            <button class="pau" value="pause"  onclick="pause()"> Pause </button>
+            <button class="rst" value="reset"  onclick="reset()"> Reset </button>
+        </div>
     </div>
 
     <div class="count">
 
         <p>Count</p>
-
-        <button class="up" value="up" onclick="contad(this)"  id="up"> Count Up  </button>
-        <button class="down" value="down" onclick="contad(this)" id="down"> Count Down </button>
+        <div id ="operacion">
+            <button class="up" value="up" onclick="contad(this)"  id="up"> Count Up  </button>
+            <button class="down" value="down" onclick="contad(this)" id="down"> Count Down </button>
+        </div>
     </div>
 
     <div class="inf">
         <p>Set to</p>
         <input class="set" type="number"  id="inicio" value="0">
         <p>Step</p>
-        <input class="set" type="number"  id="step" value="0">
+        <input class="set" type="number"  id="step" value="1">
     </div>
 
     <div id="informacion"></div>

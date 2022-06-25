@@ -1,51 +1,55 @@
 
 
-//Me falta poner que el valor del contador se actualize cada cierto tiempo,
-    //ya que solo se me actualiza el valor cada vez que pulso el boton
+//Variable que se va a ir incrementando o decrementando según el botón pulsado
+let num = 0;
+
+//Intervalo de tiempo
+let interval;
+
+//Variable que será el valor que se incrementará o decrementará al número
+let stp;
+
+//Valor que me muestra por pantalla
+let salida = document.getElementById("numerocont");
 
 
-var num = 0;
+//Función que realiza la operación de sumar o restar según el botón que tengamos pulsado
+const contad=(bot)=>{
+    interval = setInterval(() =>{
+        stp = parseInt(document.getElementById('step').value);
 
-const botsuma = document.querySelector('#up');
-var ini = document.getElementById('inicio').value;
-var stp = document.getElementById('step').value;
-
-//Función que me realiza las operaciones del contador
-
-var contad=(bot)=>{
-    
-
-    if(bot.value==="start"){
-        num=ini;
-    }
-    else if(bot.value==="pause"){
-        clearInterval(num);
-    }
-    else if(bot.value==="reset"){
-        num=0;
-    }
-    else if (bot.value==="up"){
-        console.log(num);
-        setInterval(operacionS(bot.value),100);
-        console.log(num);
-    }
-    else{
-        setInterval();
-    }
-
-    document.getElementById("numerocont").innerHTML = num;
-    
+        if(bot.value === "up") {
+            num = parseInt(num) + (stp);
+            setSalida();
+        }
+        else if(bot.value === "down"){
+            num = parseInt(num) - stp;
+            setSalida();
+        }
+    },1000);
+   
 }
 
-var operacionS=(op)=>{
+//Para enviar el valor a escribir por pantalla
+const setSalida = () =>{
+    salida.innerHTML = num;
+}
 
-    
+//Inicializa el valor del contador
+const start = () =>{
+    num = document.getElementById('inicio').value;
 
-    if(op==="up"){
-        num = parseInt(stp) + parseInt(num);
-    }
-    else{
-        num = parseInt(num) - parseInt(stp);
-    } 
+    setSalida();
+}
 
+//Reinicia el valor del contador
+const reset = () =>{
+    num = 0;
+
+    setSalida();
+}
+
+//Pausa el intervalo de incremento o decremento del valor del contador
+const pause = () => {
+    clearInterval(interval);
 }
