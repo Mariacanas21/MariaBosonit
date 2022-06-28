@@ -17,15 +17,17 @@ let salida = document.getElementById("numerocont");
 const contad=(bot)=>{
     interval = setInterval(() =>{
         stp = parseInt(document.getElementById('step').value);
-
-        if(bot.value === "up") {
+        console.log(bot);
+        if(bot === "up") {
             num = parseInt(num) + (stp);
             setSalida();
         }
-        else if(bot.value === "down"){
+        else if(bot === "down"){
+            
             num = parseInt(num) - stp;
             setSalida();
         }
+        
     },1000);
    
 }
