@@ -10,12 +10,12 @@ botonEmj.addEventListener("click", function(){
 
     //Variables
         //Array donde metere los datos que he buscado
-        const datos=[];
+        let datos=[];
         
 
     //Uso de la API para obtener los datos de los personajes de Marvel
         //Primero llamamos a fetch con la dirección de nuestra API
-        fetch('https://emojihub.herokuapp.com/api/all').then(res => res.json()).then(data => datos.push(...data));
+        fetch('https://emojihub.herokuapp.com/api/all').then(res => res.json()).then(data => datos = [...datos,data]);
 
     console.log(datos);
 
@@ -52,14 +52,16 @@ botonPeli.addEventListener("click",function(){
 
     //Variables
         //Array donde metere los datos que he buscado
-        const datos=[];
+        let datos=[];
         
 
     //Uso de la API para obtener los datos de las pelis
-    fetch('https://api.tvmaze.com/shows').then(res => res.json()).then(data => datos.push(...data));
-
+    fetch('https://api.tvmaze.com/shows').then(res => res.json()).then(data =>{
+        datos= [...data];
+        console.log(datos);
+    } );
+    
     console.log(datos);
-
     function busqued(valorB,datos){
 
         var f = datos.filter(elem => (elem.name.toLowerCase().match(valorB.toLowerCase())));
@@ -91,7 +93,7 @@ botonPok.addEventListener("click",function(){
   
     //Variables
         //Array donde metere los datos que he buscado
-        const datos=[];
+        let datos=[];
         
 
     //Uso de la API para obtener los datos de los pokemon
