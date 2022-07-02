@@ -11,7 +11,7 @@
     --color-boton: red;
 }
 
-#titulo{
+#title{
     font-size: 35px;
     background:var(--color-fondo);
     padding: auto;

@@ -1,6 +1,6 @@
 
 
-const bot = document.querySelector('#busqueda');
+const bot = document.querySelector('#search');
 
 
 //Nombres emoji
@@ -10,35 +10,38 @@ botonEmj.addEventListener("click", function(){
 
     //Variables
         //Array donde metere los datos que he buscado
-        let datos=[];
+        let dat=[];
         
 
     //Uso de la API para obtener los datos de los personajes de Marvel
         //Primero llamamos a fetch con la dirección de nuestra API
-        fetch('https://emojihub.herokuapp.com/api/all').then(res => res.json()).then(data => datos = [...datos,data]);
+        fetch('https://emojihub.herokuapp.com/api/all').then(res => res.json()).then(data =>{
+            dat= [...data];
+            console.log(dat);
+        } );
 
-    console.log(datos);
+    console.log(dat);
 
-    function busqued(valorB,datos){
+    function busqued(valorB,dat){
 
-        var f = datos.filter(elem => (elem.name.toLowerCase().match(valorB.toLowerCase())));
+        var f = dat.filter(elem => (elem.name.toLowerCase().match(valorB.toLowerCase())));
         
         return f;
     }
 
 
-    function mostrarDatos(valorB){
-        var dat = busqued(valorB.target.value,datos);
+    function showData(valorB){
+        var dat = busqued(valorB.target.value,dat);
 
         //Me va a ir devolviendo los nombres que vayan coincidiendo con lo que estoy escribiendo por pantalla
         var na = "<ol>";
         na += dat.map(elem => {return  '<li>' + (elem.name.toUpperCase()) + '</li>'}).join(" ");
         na += "</ol>";
-        document.getElementById("muestra").innerHTML = na;
+        document.getElementById("show").innerHTML = na;
     }
 
-   document.getElementById("busqueda").addEventListener('keyup',mostrarDatos);
-   document.getElementById("busqueda").addEventListener('change',mostrarDatos);
+   document.getElementById("search").addEventListener('keyup',showData);
+   document.getElementById("search").addEventListener('change',showData);
    
     
 });
@@ -52,36 +55,36 @@ botonPeli.addEventListener("click",function(){
 
     //Variables
         //Array donde metere los datos que he buscado
-        let datos=[];
+        let dat=[];
         
 
     //Uso de la API para obtener los datos de las pelis
     fetch('https://api.tvmaze.com/shows').then(res => res.json()).then(data =>{
-        datos= [...data];
-        console.log(datos);
+        dat= [...data];
+        console.log(dat);
     } );
     
-    console.log(datos);
-    function busqued(valorB,datos){
+    console.log(dat);
+    function busqued(valorB,dat){
 
-        var f = datos.filter(elem => (elem.name.toLowerCase().match(valorB.toLowerCase())));
+        var f = dat.filter(elem => (elem.name.toLowerCase().match(valorB.toLowerCase())));
         
         return f;
     }
 
 
-    function mostrarDatos(valorB){
-        var dat = busqued(valorB.target.value,datos);
+    function showData(valorB){
+        var dat = busqued(valorB.target.value,dat);
 
         //Me va a ir devolviendo los nombres que vayan coincidiendo con lo que estoy escribiendo por pantalla
         var na = "<ol>";
         na += dat.map(elem => {return  '<li>' + (elem.name.toUpperCase()) + '</li>'}).join(" ");
         na += "</ol>";
-        document.getElementById("muestra").innerHTML = na;
+        document.getElementById("show").innerHTML = na;
     }
 
-   document.getElementById("busqueda").addEventListener('keyup',mostrarDatos);
-   document.getElementById("busqueda").addEventListener('change',mostrarDatos);
+   document.getElementById("search").addEventListener('keyup',showData);
+   document.getElementById("search").addEventListener('change',showData);
    
 });
 
@@ -93,33 +96,36 @@ botonPok.addEventListener("click",function(){
   
     //Variables
         //Array donde metere los datos que he buscado
-        let datos=[];
+        let dat=[];
         
 
     //Uso de la API para obtener los datos de los pokemon
-    fetch('https://pokeapi.co/api/v2/pokemon').then(res => res.json()).then(data => datos.push(...data.results));
+    fetch('https://pokeapi.co/api/v2/pokemon').then(res => res.json()).then(data =>{
+        dat= [...data];
+        console.log(dat);
+    } );
 
-    console.log(datos);
+    console.log(dat);
 
-    function busqued(valorB,datos){
+    function busqued(valorB,dat){
         
-        var f = datos.filter(elem => (elem.name.toLowerCase().match(valorB.toLowerCase())));
+        var f = dat.filter(elem => (elem.name.toLowerCase().match(valorB.toLowerCase())));
         
         return f;
     }
 
 
-    function mostrarDatos(valorB){
-        var dat = busqued(valorB.target.value,datos);
+    function showData(valorB){
+        var dat = busqued(valorB.target.value,dat);
 
         //Me va a ir devolviendo los nombres que vayan coincidiendo con lo que estoy escribiendo por pantalla
         var na = "<ol>";
         na += dat.map(elem => {return  '<li>' + (elem.name.toUpperCase()) + '</li>'}).join(" ");
         na += "</ol>";
-        document.getElementById("muestra").innerHTML = na;
+        document.getElementById("show").innerHTML = na;
     }
 
-   document.getElementById("busqueda").addEventListener('keyup',mostrarDatos);
-   document.getElementById("busqueda").addEventListener('change',mostrarDatos);
+   document.getElementById("search").addEventListener('keyup',showData);
+   document.getElementById("search").addEventListener('change',showData);
    
 });
