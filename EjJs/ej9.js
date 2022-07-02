@@ -1,6 +1,5 @@
 
 
-<script>
 
     let toLowercaseKeys = (obj) =>{
         var newResult = [];
@@ -15,5 +14,3 @@
     const myObj = {NamE: 'CharLes', ADDress: 'Home Street'};
     const myObjLowerCase = toLowercaseKeys(myObj);
     document.write(myObjLowerCase);
-
-</script>
