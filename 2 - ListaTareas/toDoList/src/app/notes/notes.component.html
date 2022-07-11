@@ -1,0 +1,24 @@
+
+
+
+
+
+<div class="notas">
+
+    <div class="cuadroNotes">
+        <h4> Nombre de la Tarea </h4>
+        <input type="text" placeholder="Inserta la Note" #note>
+        <button (click)="addNewNote(note.value)"> Nueva tarea </button>
+    </div>
+
+
+    <ul class="background-not">
+        <li class="not" *ngFor="let note of notes">
+           <div class="la"> 
+             {{ note.name}}
+            <button (click)="deleteNote(note.id)"> Eliminar </button>
+            </div>
+        </li>
+        
+    </ul>
+</div>

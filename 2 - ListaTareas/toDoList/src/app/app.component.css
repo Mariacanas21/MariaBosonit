@@ -1,0 +1,12 @@
+
+
+h1{
+    background-color: yellow;
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    border-width: 10px;
+    border-color: black;
+    border-style: solid;
+    text-transform: uppercase;
+}
