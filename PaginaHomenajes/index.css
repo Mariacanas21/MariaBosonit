@@ -5,6 +5,7 @@
 :root{
   --color-fondo: 	#dcdcdc;
   --color-fondo-titulo: #c0c0c0;
+  text-align: center;
 }
 
 main{
@@ -13,16 +14,16 @@ main{
   background:var(--color-fondo);
   font-family:cursive;
   border: 1px solid #000;
-  width:80%;
-  margin:auto;
+  margin:0 auto;
+
 }
 
-#titulo-descrp{
+.titulo-descrp{
   background:var(--color-fondo-titulo);
-  width:50%;
-  margin:auto;
+  margin:0 auto;
   border: 1px solid #000;
   border-radius:20px;
+  width: 80%;
 }
 
 #img-div{
@@ -30,12 +31,10 @@ main{
   border-radius:20px;
   padding-top:10px;
   background:var(--color-fondo-titulo);
-  width:50%;
   margin:10px auto;
 }
 
 #imagen{
-  display:block;
   margin:0px auto 30px auto;
   width:550px;
   height:500px;
@@ -47,7 +46,6 @@ main{
 
 #tribute-info{
   background:var(--color-fondo-titulo);
-  width:50%;
   margin:auto;
   border: 1px solid #000;
   border-radius:20px;
