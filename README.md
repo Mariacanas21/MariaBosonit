@@ -7,8 +7,8 @@ En ella se podrán encontrar varias carpetas con sus respectivos ejercicios. Car
   2. JS -> Tendremos los ejercicios de un Contador, Display, Buscador y otra carpeta en la que se podrán encontrar varios ejercicios con el 
     objetivo de trabajar los métodos en JS con sus enunciados
   3. AngularJS -> Tendremos los ejercicios de NumImparPar (App en la que irán apareciendo los números impares y pares separados, automaticamente se nos incrementará el valor del número
-   y nos irán apareciendo primero los números impares y luego los pares, ListaTareas (toDoList donde se podrán añadir y quitar nuevas tareas)
-   y Minionald (App en la que podremos navegar por diferentes páginas (Routas) y ver información sobre los minions) 
+   y nos irán apareciendo primero los números impares y luego los pares, ListaTareas (toDoList donde se podrán añadir y quitar nuevas tareas),
+    Minionald (App en la que podremos navegar por diferentes páginas (Routas) y ver información sobre los minions), Gif App (App en la que se podrán buscar gifs en función de un nombre, mostrando por pantalla todos los que coincidan con esos carácteres introducidos en el buscador), Gestión de clientes (App que gestiona una lista de clientes junto con un sistema de alta de clientes)
 
 https://drive.google.com/drive/folders/1GnKsKf0SCA3sMvAntF3ozcBskmLdN0Al?usp=sharing
 
